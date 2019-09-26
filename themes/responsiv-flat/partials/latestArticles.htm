@@ -1,0 +1,11 @@
+description = "Shows the latest articles"
+
+[blogPosts]
+pageNumber = 1
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = "blog/post"
+==
+{% component 'blogPosts' %}
