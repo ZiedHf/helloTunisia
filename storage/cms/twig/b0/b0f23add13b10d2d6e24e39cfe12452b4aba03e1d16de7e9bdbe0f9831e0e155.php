@@ -63,7 +63,7 @@ class __TwigTemplate_1b2d637a89692e2259d124bfe4a4970bc355ef183f7c0a4e10d46d9c2e3
         // line 81
         echo twig_call_macro($macros["nav"], "macro_render_menu", [($context["links"] ?? null)], 81, $context, $this->getSourceContext());
         echo "
-                <li>
+                <!-- <li>
                     <button
                         onclick=\"window.location='";
         // line 84
@@ -72,7 +72,7 @@ class __TwigTemplate_1b2d637a89692e2259d124bfe4a4970bc355ef183f7c0a4e10d46d9c2e3
                         class=\"btn btn-sm navbar-btn btn-primary navbar-right hidden-sm hidden-xs\">
                         Sign in
                     </button>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
@@ -259,13 +259,13 @@ class __TwigTemplate_1b2d637a89692e2259d124bfe4a4970bc355ef183f7c0a4e10d46d9c2e3
         <div class=\"collapse navbar-collapse navbar-main-collapse\">
             <ul class=\"nav navbar-nav navbar-right\">
                 {{ nav.render_menu(links) }}
-                <li>
+                <!-- <li>
                     <button
                         onclick=\"window.location='{{ 'samples/signin'|page }}'\"
                         class=\"btn btn-sm navbar-btn btn-primary navbar-right hidden-sm hidden-xs\">
                         Sign in
                     </button>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>

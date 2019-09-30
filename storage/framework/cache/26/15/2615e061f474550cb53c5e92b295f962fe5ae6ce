@@ -1,56 +1,38 @@
-1569529439a:1:{s:8:"home.htm";a:9:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:3751:"title = "Home"
+1569800372a:1:{s:8:"home.htm";a:12:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1504:"title = "Home"
 url = "/"
 layout = "default"
 is_hidden = 0
+
+[carousel]
+id = 1
+
+[searchInput]
+useAutoComplete = 1
+autoCompleteResultCount = 5
+showProviderBadge = 1
+
+[slider]
+autoplay = 1
+loop = 1
+bootstrap = 1
 ==
 <section class="home-title">
-    <div class="container">
         <div class="row">
-            <div class="col-sm-4">
-                <h3>Flat Theme for OctoberCMS</h3>
-                <p>You have the design, you have the code. We've created the product that will help your startup to look even better.</p>
-                <div class="signup-form">
-                    <form>
-                        <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Your E-mail">
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <input type="password" class="form-control" placeholder="Password">
-                            </div>
-                            <div>
-                                <input type="password" class="form-control" placeholder="Confirmation">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-block btn-info">Sign Up</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="additional-links">
-                    By signing up you agree to <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
-                </div>
+            <div class="col-sm-12">
+                {% component 'slider' %}
             </div>
+            <!--
             <div class="col-sm-7 col-sm-offset-1 player-wrapper">
                 <div class="player">
                     <iframe src="http://player.vimeo.com/video/29568236?color=3498db" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
             </div>
+            -->
         </div>
-    </div>
-</section>
-
-<section class="logos">
-    <div class="container">
-        <div><img src="{{ 'assets/images/logos/mashable.png'|theme }}" alt=""></div>
-        <div><img src="{{ 'assets/images/logos/guardian.png'|theme }}" alt=""></div>
-        <div><img src="{{ 'assets/images/logos/forbes.png'|theme }}" alt=""></div>
-        <div><img src="{{ 'assets/images/logos/red-bull.png'|theme }}" alt=""></div>
-        <div><img src="{{ 'assets/images/logos/ny-times.png'|theme }}" alt=""></div>
-    </div>
 </section>
 
 <br />
+{% component 'searchInput' %}
 
 <div class="container">
 
@@ -73,74 +55,25 @@ is_hidden = 0
         </div>
     </div>
 
-    <div class="recent-tweets">
-        <h4 class="headline"><span>Recent tweets</span></h4>
-        <div class="tweet">
-            <i class="fa fa-twitter"></i>
-            <p>
-                Salami turkey jowl rump jerky ball tip drumstick ground round tenderloin kielbasa hamburger prosciutto.
-                <a href="#">1 day ago</a>
-            </p>
-        </div>
-        <div class="tweet">
-            <i class="fa fa-twitter"></i>
-            <p>
-                Short loin pork belly beef, tenderloin swine ribeye tri-tip doner salami rump hamburger.
-                <a href="#">2 days ago</a>
-            </p>
-        </div>
-    </div>
-
 </div>
 
-<br />";s:5:"mtime";i:1569528834;s:6:"markup";s:3690:"<section class="home-title">
-    <div class="container">
+<br />";s:5:"mtime";i:1569789453;s:6:"markup";s:1293:"<section class="home-title">
         <div class="row">
-            <div class="col-sm-4">
-                <h3>Flat Theme for OctoberCMS</h3>
-                <p>You have the design, you have the code. We've created the product that will help your startup to look even better.</p>
-                <div class="signup-form">
-                    <form>
-                        <div class="form-group">
-                            <input class="form-control" type="text" placeholder="Your E-mail">
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <input type="password" class="form-control" placeholder="Password">
-                            </div>
-                            <div>
-                                <input type="password" class="form-control" placeholder="Confirmation">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-block btn-info">Sign Up</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="additional-links">
-                    By signing up you agree to <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>
-                </div>
+            <div class="col-sm-12">
+                {% component 'slider' %}
             </div>
+            <!--
             <div class="col-sm-7 col-sm-offset-1 player-wrapper">
                 <div class="player">
                     <iframe src="http://player.vimeo.com/video/29568236?color=3498db" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
             </div>
+            -->
         </div>
-    </div>
-</section>
-
-<section class="logos">
-    <div class="container">
-        <div><img src="{{ 'assets/images/logos/mashable.png'|theme }}" alt=""></div>
-        <div><img src="{{ 'assets/images/logos/guardian.png'|theme }}" alt=""></div>
-        <div><img src="{{ 'assets/images/logos/forbes.png'|theme }}" alt=""></div>
-        <div><img src="{{ 'assets/images/logos/red-bull.png'|theme }}" alt=""></div>
-        <div><img src="{{ 'assets/images/logos/ny-times.png'|theme }}" alt=""></div>
-    </div>
 </section>
 
 <br />
+{% component 'searchInput' %}
 
 <div class="container">
 
@@ -163,24 +96,6 @@ is_hidden = 0
         </div>
     </div>
 
-    <div class="recent-tweets">
-        <h4 class="headline"><span>Recent tweets</span></h4>
-        <div class="tweet">
-            <i class="fa fa-twitter"></i>
-            <p>
-                Salami turkey jowl rump jerky ball tip drumstick ground round tenderloin kielbasa hamburger prosciutto.
-                <a href="#">1 day ago</a>
-            </p>
-        </div>
-        <div class="tweet">
-            <i class="fa fa-twitter"></i>
-            <p>
-                Short loin pork belly beef, tenderloin swine ribeye tri-tip doner salami rump hamburger.
-                <a href="#">2 days ago</a>
-            </p>
-        </div>
-    </div>
-
 </div>
 
-<br />";s:4:"code";N;s:5:"title";s:4:"Home";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";}}
+<br />";s:4:"code";N;s:5:"title";s:4:"Home";s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:8:"carousel";a:1:{s:2:"id";s:1:"1";}s:11:"searchInput";a:3:{s:15:"useAutoComplete";s:1:"1";s:23:"autoCompleteResultCount";s:1:"5";s:17:"showProviderBadge";s:1:"1";}s:6:"slider";a:3:{s:8:"autoplay";s:1:"1";s:4:"loop";s:1:"1";s:9:"bootstrap";s:1:"1";}}}

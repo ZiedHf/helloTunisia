@@ -35,69 +35,33 @@ class __TwigTemplate_474169f35a2cbb7e25b97b89c259949dc48b05bdd9cbe53b020d2175287
         $macros = $this->macros;
         // line 1
         echo "<section class=\"home-title\">
-    <div class=\"container\">
         <div class=\"row\">
-            <div class=\"col-sm-4\">
-                <h3>Flat Theme for OctoberCMS</h3>
-                <p>You have the design, you have the code. We've created the product that will help your startup to look even better.</p>
-                <div class=\"signup-form\">
-                    <form>
-                        <div class=\"form-group\">
-                            <input class=\"form-control\" type=\"text\" placeholder=\"Your E-mail\">
-                        </div>
-                        <div class=\"form-group\">
-                            <div>
-                                <input type=\"password\" class=\"form-control\" placeholder=\"Password\">
-                            </div>
-                            <div>
-                                <input type=\"password\" class=\"form-control\" placeholder=\"Confirmation\">
-                            </div>
-                        </div>
-                        <div class=\"form-group\">
-                            <button type=\"submit\" class=\"btn btn-block btn-info\">Sign Up</button>
-                        </div>
-                    </form>
-                </div>
-                <div class=\"additional-links\">
-                    By signing up you agree to <a href=\"#\">Terms of Use</a> and <a href=\"#\">Privacy Policy</a>
-                </div>
-            </div>
+            <div class=\"col-sm-12\">
+                ";
+        // line 4
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("slider"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 5
+        echo "            </div>
+            <!--
             <div class=\"col-sm-7 col-sm-offset-1 player-wrapper\">
                 <div class=\"player\">
                     <iframe src=\"http://player.vimeo.com/video/29568236?color=3498db\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
             </div>
+            -->
         </div>
-    </div>
-</section>
-
-<section class=\"logos\">
-    <div class=\"container\">
-        <div><img src=\"";
-        // line 40
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/logos/mashable.png");
-        echo "\" alt=\"\"></div>
-        <div><img src=\"";
-        // line 41
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/logos/guardian.png");
-        echo "\" alt=\"\"></div>
-        <div><img src=\"";
-        // line 42
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/logos/forbes.png");
-        echo "\" alt=\"\"></div>
-        <div><img src=\"";
-        // line 43
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/logos/red-bull.png");
-        echo "\" alt=\"\"></div>
-        <div><img src=\"";
-        // line 44
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/logos/ny-times.png");
-        echo "\" alt=\"\"></div>
-    </div>
 </section>
 
 <br />
-
+";
+        // line 17
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("searchInput"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 18
+        echo "
 <div class=\"container\">
 
     <!-- Services -->
@@ -107,11 +71,11 @@ class __TwigTemplate_474169f35a2cbb7e25b97b89c259949dc48b05bdd9cbe53b020d2175287
             <p>He hasn't got a freckle my mad as a middy. Trent from punchy maccas no dramas shazza got us some ripper. As dry as a bradman flamin lets throw a cut lunch commando.</p>
 
             ";
-        // line 58
+        // line 27
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("services"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 59
+        // line 28
         echo "        </div>
     </div>
     
@@ -121,30 +85,12 @@ class __TwigTemplate_474169f35a2cbb7e25b97b89c259949dc48b05bdd9cbe53b020d2175287
             <h4 class=\"headline\"><span>Latest News</span></h4>
             <p>Follow our latest news !</p>
             ";
-        // line 67
+        // line 36
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("latestArticles"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 68
+        // line 37
         echo "        </div>
-    </div>
-
-    <div class=\"recent-tweets\">
-        <h4 class=\"headline\"><span>Recent tweets</span></h4>
-        <div class=\"tweet\">
-            <i class=\"fa fa-twitter\"></i>
-            <p>
-                Salami turkey jowl rump jerky ball tip drumstick ground round tenderloin kielbasa hamburger prosciutto.
-                <a href=\"#\">1 day ago</a>
-            </p>
-        </div>
-        <div class=\"tweet\">
-            <i class=\"fa fa-twitter\"></i>
-            <p>
-                Short loin pork belly beef, tenderloin swine ribeye tri-tip doner salami rump hamburger.
-                <a href=\"#\">2 days ago</a>
-            </p>
-        </div>
     </div>
 
 </div>
@@ -164,59 +110,28 @@ class __TwigTemplate_474169f35a2cbb7e25b97b89c259949dc48b05bdd9cbe53b020d2175287
 
     public function getDebugInfo()
     {
-        return array (  129 => 68,  125 => 67,  115 => 59,  111 => 58,  94 => 44,  90 => 43,  86 => 42,  82 => 41,  78 => 40,  37 => 1,);
+        return array (  93 => 37,  89 => 36,  79 => 28,  75 => 27,  64 => 18,  60 => 17,  46 => 5,  42 => 4,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<section class=\"home-title\">
-    <div class=\"container\">
         <div class=\"row\">
-            <div class=\"col-sm-4\">
-                <h3>Flat Theme for OctoberCMS</h3>
-                <p>You have the design, you have the code. We've created the product that will help your startup to look even better.</p>
-                <div class=\"signup-form\">
-                    <form>
-                        <div class=\"form-group\">
-                            <input class=\"form-control\" type=\"text\" placeholder=\"Your E-mail\">
-                        </div>
-                        <div class=\"form-group\">
-                            <div>
-                                <input type=\"password\" class=\"form-control\" placeholder=\"Password\">
-                            </div>
-                            <div>
-                                <input type=\"password\" class=\"form-control\" placeholder=\"Confirmation\">
-                            </div>
-                        </div>
-                        <div class=\"form-group\">
-                            <button type=\"submit\" class=\"btn btn-block btn-info\">Sign Up</button>
-                        </div>
-                    </form>
-                </div>
-                <div class=\"additional-links\">
-                    By signing up you agree to <a href=\"#\">Terms of Use</a> and <a href=\"#\">Privacy Policy</a>
-                </div>
+            <div class=\"col-sm-12\">
+                {% component 'slider' %}
             </div>
+            <!--
             <div class=\"col-sm-7 col-sm-offset-1 player-wrapper\">
                 <div class=\"player\">
                     <iframe src=\"http://player.vimeo.com/video/29568236?color=3498db\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
             </div>
+            -->
         </div>
-    </div>
-</section>
-
-<section class=\"logos\">
-    <div class=\"container\">
-        <div><img src=\"{{ 'assets/images/logos/mashable.png'|theme }}\" alt=\"\"></div>
-        <div><img src=\"{{ 'assets/images/logos/guardian.png'|theme }}\" alt=\"\"></div>
-        <div><img src=\"{{ 'assets/images/logos/forbes.png'|theme }}\" alt=\"\"></div>
-        <div><img src=\"{{ 'assets/images/logos/red-bull.png'|theme }}\" alt=\"\"></div>
-        <div><img src=\"{{ 'assets/images/logos/ny-times.png'|theme }}\" alt=\"\"></div>
-    </div>
 </section>
 
 <br />
+{% component 'searchInput' %}
 
 <div class=\"container\">
 
@@ -236,24 +151,6 @@ class __TwigTemplate_474169f35a2cbb7e25b97b89c259949dc48b05bdd9cbe53b020d2175287
             <h4 class=\"headline\"><span>Latest News</span></h4>
             <p>Follow our latest news !</p>
             {% partial 'latestArticles' %}
-        </div>
-    </div>
-
-    <div class=\"recent-tweets\">
-        <h4 class=\"headline\"><span>Recent tweets</span></h4>
-        <div class=\"tweet\">
-            <i class=\"fa fa-twitter\"></i>
-            <p>
-                Salami turkey jowl rump jerky ball tip drumstick ground round tenderloin kielbasa hamburger prosciutto.
-                <a href=\"#\">1 day ago</a>
-            </p>
-        </div>
-        <div class=\"tweet\">
-            <i class=\"fa fa-twitter\"></i>
-            <p>
-                Short loin pork belly beef, tenderloin swine ribeye tri-tip doner salami rump hamburger.
-                <a href=\"#\">2 days ago</a>
-            </p>
         </div>
     </div>
 

@@ -1,4 +1,4 @@
-1569529439a:1:{s:7:"nav.htm";a:5:{s:8:"fileName";s:7:"nav.htm";s:7:"content";s:3373:"
+1569790058a:1:{s:7:"nav.htm";a:5:{s:8:"fileName";s:7:"nav.htm";s:7:"content";s:3382:"
 {# Note: Only one levels of sublinks are supported by Bootstrap 3 #}
 {% set
     links = {
@@ -80,18 +80,18 @@
         <div class="collapse navbar-collapse navbar-main-collapse">
             <ul class="nav navbar-nav navbar-right">
                 {{ nav.render_menu(links) }}
-                <li>
+                <!-- <li>
                     <button
                         onclick="window.location='{{ 'samples/signin'|page }}'"
                         class="btn btn-sm navbar-btn btn-primary navbar-right hidden-sm hidden-xs">
                         Sign in
                     </button>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
 </nav>
-";s:5:"mtime";i:1569201070;s:6:"markup";s:3371:"{# Note: Only one levels of sublinks are supported by Bootstrap 3 #}
+";s:5:"mtime";i:1569612635;s:6:"markup";s:3380:"{# Note: Only one levels of sublinks are supported by Bootstrap 3 #}
 {% set
     links = {
         'home': ['home', 'Home'],
@@ -172,13 +172,13 @@
         <div class="collapse navbar-collapse navbar-main-collapse">
             <ul class="nav navbar-nav navbar-right">
                 {{ nav.render_menu(links) }}
-                <li>
+                <!-- <li>
                     <button
                         onclick="window.location='{{ 'samples/signin'|page }}'"
                         class="btn btn-sm navbar-btn btn-primary navbar-right hidden-sm hidden-xs">
                         Sign in
                     </button>
-                </li>
+                </li> -->
             </ul>
         </div>
     </div>
