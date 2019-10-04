@@ -1,4 +1,4 @@
-1569800372a:1:{s:13:"blog/blog.htm";a:10:{s:8:"fileName";s:13:"blog/blog.htm";s:7:"content";s:2720:"title = "Blog"
+1570216707a:1:{s:13:"blog/blog.htm";a:10:{s:8:"fileName";s:13:"blog/blog.htm";s:7:"content";s:3457:"title = "Blog"
 url = "/blog/:page?"
 layout = "default"
 is_hidden = 0
@@ -38,9 +38,26 @@ postPage = "blog/post"
                             {% endfor %}
                             on {{ post.published_at|date('M d, Y') }}
                         </p>
-                        <a href="{{ 'blog/post/' ~ post.slug }}"><img class="img-responsive" src="{{ 'assets/images/blog/post1.jpg'|theme }}" alt=""></a>
+                        
+                        <!--Thunbnail-->
+                        {% if post.featured_images.count %}
+                            <div class="featured-images text-center">
+                                {% set image = post.featured_images[0] %}
+                                <a href="{{ post.url }}">
+                                    <img
+                                        data-src="{{ image.filename }}"
+                                        src="{{ image.path }}"
+                                        alt="{{ image.description }}"
+                                        class="img-responsive" 
+                                    />
+                                </a>
+                            </div>
+                            <hr />
+                        {% endif %}
+                        <!--END Thunbnail-->
+                        
                         <p>{{ post.summary|raw }}</p>
-                        <a class="btn btn-lg btn-default" href="{{ 'blog/post/' ~ post.slug }}">Read More...</a>
+                        <a class="btn btn-lg btn-default" href="{{ post.url }}">Read More...</a>
                     </div>
                 </div>
                         {% else %}
@@ -73,7 +90,7 @@ postPage = "blog/post"
 
         </div>
     </div>
-</div>";s:5:"mtime";i:1569452014;s:6:"markup";s:2483:"<section id="layout-title">
+</div>";s:5:"mtime";i:1570216103;s:6:"markup";s:3220:"<section id="layout-title">
     <div class="container">
         <h3>Blog</h3>
     </div>
@@ -100,9 +117,26 @@ postPage = "blog/post"
                             {% endfor %}
                             on {{ post.published_at|date('M d, Y') }}
                         </p>
-                        <a href="{{ 'blog/post/' ~ post.slug }}"><img class="img-responsive" src="{{ 'assets/images/blog/post1.jpg'|theme }}" alt=""></a>
+                        
+                        <!--Thunbnail-->
+                        {% if post.featured_images.count %}
+                            <div class="featured-images text-center">
+                                {% set image = post.featured_images[0] %}
+                                <a href="{{ post.url }}">
+                                    <img
+                                        data-src="{{ image.filename }}"
+                                        src="{{ image.path }}"
+                                        alt="{{ image.description }}"
+                                        class="img-responsive" 
+                                    />
+                                </a>
+                            </div>
+                            <hr />
+                        {% endif %}
+                        <!--END Thunbnail-->
+                        
                         <p>{{ post.summary|raw }}</p>
-                        <a class="btn btn-lg btn-default" href="{{ 'blog/post/' ~ post.slug }}">Read More...</a>
+                        <a class="btn btn-lg btn-default" href="{{ post.url }}">Read More...</a>
                     </div>
                 </div>
                         {% else %}

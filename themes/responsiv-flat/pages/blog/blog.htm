@@ -38,9 +38,26 @@ postPage = "blog/post"
                             {% endfor %}
                             on {{ post.published_at|date('M d, Y') }}
                         </p>
-                        <a href="{{ 'blog/post/' ~ post.slug }}"><img class="img-responsive" src="{{ 'assets/images/blog/post1.jpg'|theme }}" alt=""></a>
+                        
+                        <!--Thunbnail-->
+                        {% if post.featured_images.count %}
+                            <div class="featured-images text-center">
+                                {% set image = post.featured_images[0] %}
+                                <a href="{{ post.url }}">
+                                    <img
+                                        data-src="{{ image.filename }}"
+                                        src="{{ image.path }}"
+                                        alt="{{ image.description }}"
+                                        class="img-responsive" 
+                                    />
+                                </a>
+                            </div>
+                            <hr />
+                        {% endif %}
+                        <!--END Thunbnail-->
+                        
                         <p>{{ post.summary|raw }}</p>
-                        <a class="btn btn-lg btn-default" href="{{ 'blog/post/' ~ post.slug }}">Read More...</a>
+                        <a class="btn btn-lg btn-default" href="{{ post.url }}">Read More...</a>
                     </div>
                 </div>
                         {% else %}

@@ -35,32 +35,29 @@ class __TwigTemplate_474169f35a2cbb7e25b97b89c259949dc48b05bdd9cbe53b020d2175287
         $macros = $this->macros;
         // line 1
         echo "<section class=\"home-title\">
-        <div class=\"row\">
-            <div class=\"col-sm-12\">
                 ";
-        // line 4
+        // line 2
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("slider"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
-        // line 5
-        echo "            </div>
-            <!--
+        // line 3
+        echo "            <!--
             <div class=\"col-sm-7 col-sm-offset-1 player-wrapper\">
                 <div class=\"player\">
                     <iframe src=\"http://player.vimeo.com/video/29568236?color=3498db\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
             </div>
             -->
-        </div>
 </section>
 
 <br />
+
 ";
-        // line 17
+        // line 14
         $context['__cms_component_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("searchInput"        , $context['__cms_component_params']        );
         unset($context['__cms_component_params']);
-        // line 18
+        // line 15
         echo "
 <div class=\"container\">
 
@@ -71,11 +68,11 @@ class __TwigTemplate_474169f35a2cbb7e25b97b89c259949dc48b05bdd9cbe53b020d2175287
             <p>He hasn't got a freckle my mad as a middy. Trent from punchy maccas no dramas shazza got us some ripper. As dry as a bradman flamin lets throw a cut lunch commando.</p>
 
             ";
-        // line 27
+        // line 24
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("services"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 28
+        // line 25
         echo "        </div>
     </div>
     
@@ -85,11 +82,11 @@ class __TwigTemplate_474169f35a2cbb7e25b97b89c259949dc48b05bdd9cbe53b020d2175287
             <h4 class=\"headline\"><span>Latest News</span></h4>
             <p>Follow our latest news !</p>
             ";
-        // line 36
+        // line 33
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("latestArticles"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 37
+        // line 34
         echo "        </div>
     </div>
 
@@ -110,16 +107,13 @@ class __TwigTemplate_474169f35a2cbb7e25b97b89c259949dc48b05bdd9cbe53b020d2175287
 
     public function getDebugInfo()
     {
-        return array (  93 => 37,  89 => 36,  79 => 28,  75 => 27,  64 => 18,  60 => 17,  46 => 5,  42 => 4,  37 => 1,);
+        return array (  90 => 34,  86 => 33,  76 => 25,  72 => 24,  61 => 15,  57 => 14,  44 => 3,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("<section class=\"home-title\">
-        <div class=\"row\">
-            <div class=\"col-sm-12\">
                 {% component 'slider' %}
-            </div>
             <!--
             <div class=\"col-sm-7 col-sm-offset-1 player-wrapper\">
                 <div class=\"player\">
@@ -127,10 +121,10 @@ class __TwigTemplate_474169f35a2cbb7e25b97b89c259949dc48b05bdd9cbe53b020d2175287
                 </div>
             </div>
             -->
-        </div>
 </section>
 
 <br />
+
 {% component 'searchInput' %}
 
 <div class=\"container\">

@@ -1,4 +1,4 @@
-1569800372a:1:{s:8:"home.htm";a:12:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1504:"title = "Home"
+1570216792a:1:{s:8:"home.htm";a:12:{s:8:"fileName";s:8:"home.htm";s:7:"content";s:1406:"title = "Home"
 url = "/"
 layout = "default"
 is_hidden = 0
@@ -17,10 +17,7 @@ loop = 1
 bootstrap = 1
 ==
 <section class="home-title">
-        <div class="row">
-            <div class="col-sm-12">
                 {% component 'slider' %}
-            </div>
             <!--
             <div class="col-sm-7 col-sm-offset-1 player-wrapper">
                 <div class="player">
@@ -28,10 +25,10 @@ bootstrap = 1
                 </div>
             </div>
             -->
-        </div>
 </section>
 
 <br />
+
 {% component 'searchInput' %}
 
 <div class="container">
@@ -57,11 +54,8 @@ bootstrap = 1
 
 </div>
 
-<br />";s:5:"mtime";i:1569789453;s:6:"markup";s:1293:"<section class="home-title">
-        <div class="row">
-            <div class="col-sm-12">
+<br />";s:5:"mtime";i:1570214495;s:6:"markup";s:1195:"<section class="home-title">
                 {% component 'slider' %}
-            </div>
             <!--
             <div class="col-sm-7 col-sm-offset-1 player-wrapper">
                 <div class="player">
@@ -69,10 +63,10 @@ bootstrap = 1
                 </div>
             </div>
             -->
-        </div>
 </section>
 
 <br />
+
 {% component 'searchInput' %}
 
 <div class="container">
