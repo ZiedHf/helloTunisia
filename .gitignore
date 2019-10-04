@@ -5,5 +5,5 @@ storage/framework/cache/
 storage/framework/sessions/
 storage/cms/cache/
 storage/cms/combiner/assets/
-storage/cms/twig/assets/
+storage/cms/twig/
 storage/temp/

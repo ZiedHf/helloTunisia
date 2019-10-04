@@ -254,4 +254,5 @@
   'RainLab\\Translate\\Classes\\LocaleMiddleware' => 'plugins/rainlab/translate/classes/LocaleMiddleware.php',
   'RainLab\\Translate\\Components\\LocalePicker' => 'plugins/rainlab/translate/components/LocalePicker.php',
   'RainLab\\Translate\\Components\\AlternateHrefLangElements' => 'plugins/rainlab/translate/components/AlternateHrefLangElements.php',
+  'Cms\\Components\\UnknownComponent' => 'modules/cms/components/UnknownComponent.php',
 );
