@@ -2,12 +2,22 @@
 
 use Backend;
 use System\Classes\PluginBase;
-
+use RainLab\Blog\Models\Category as CategoryModel;
+use RainLab\Blog\Controllers\Categories as CategoriesController;
 /**
  * BlogSorting Plugin Information File
  */
 class Plugin extends PluginBase
 {
+
+    const DEFAULT_ICON = 'icon-magic';
+    // const LOCALIZATION_KEY = 'ziedhf.blogsorting::lang.';
+    const DB_PREFIX = 'ziedhf_blogsorting_';
+
+    public $require = [
+        'RainLab.Blog'
+    ];
+
     /**
      * Returns information about this plugin.
      *
@@ -16,10 +26,11 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'BlogSorting',
-            'description' => 'No description provided yet...',
-            'author'      => 'ZiedHf',
-            'icon'        => 'icon-leaf'
+            'name'        => 'Blog Sorting',
+            'description' => 'Enhance sorting for Blog',
+            'author'      => 'Zied Hf',
+            'icon'        => 'icon-leaf',
+            'homepage'    => 'https://github.com/ziedhf/helloTunisia'
         ];
     }
 
@@ -40,8 +51,44 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-
+        $this->extendController();
+        $this->extendModel();
     }
+
+    /**
+     * Extend Categories controller
+     */
+    private function extendController()
+    {
+        CategoriesController::extendFormFields(function ($form, $model) {
+            if (!$model instanceof CategoryModel) {
+                return;
+            }
+
+            $form->addFields([
+                self::DB_PREFIX . 'order' => [
+                    'label' => 'Order',
+                    'type' => 'number',
+                    'comment' => 'Set the order here',
+                    'allowEmpty' => true,
+                    'span' => 'left'
+                ]
+            ]);
+        });
+    }
+
+    /**
+     * Extend Category model
+     */
+    private function extendModel()
+    {
+        CategoryModel::extend(function ($model) {
+            $model->addDynamicMethod('getBlogSortingOrderAttribute', function() use ($model) {
+                return $model->{self::DB_PREFIX . 'order'};
+            });
+        });
+    }
+
 
     /**
      * Registers any front-end components implemented in this plugin.
