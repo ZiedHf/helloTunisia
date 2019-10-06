@@ -1,4 +1,8 @@
-
+[searchInput]
+useAutoComplete = 1
+autoCompleteResultCount = 5
+showProviderBadge = 1
+==
 {# Note: Only one levels of sublinks are supported by Bootstrap 3 #}
 {% set
     links = {
@@ -87,6 +91,45 @@
                         Sign in
                     </button>
                 </li> -->
+                <li>
+                    <!--<form class="navbar-form navbar-right" action="#" role="search">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn"><span class="fui-search"></span></button>
+                                </span>
+                            </div>
+                        </div>
+                    </form>-->
+                    
+                    <!-- SEARCH -->
+                    <form action="{{ searchInput.searchPage | page }}?q={{ query | url_encode(true) }}" method="get" class="navbar-form navbar-right" role="search">
+                        <div class="form-group ss-search-form">
+                            <div class="input-group ss-search-form__input">
+                                <input name="q" class="form-control" type="search" placeholder="Search .." 
+                                       value="{{ searchInput.query }}"
+                                       autocomplete="off"
+                                       autofocus
+                                        {% if searchInput.useAutoComplete %}
+                                            data-track-input
+                                            data-request="{{ searchInput }}::onType"
+                                            data-request-before-update="document.getElementById('autocomplete-results').classList.add('ss-search-form__results--visible')"
+                                            data-request-update="'{{ searchInput }}::autocomplete': '#autocomplete-results'"
+                                        {% endif %}
+                                >
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn"><span class="fui-search"></span></button>
+                                </span>
+                                <!--<button class="ss-search-form__submit" type="submit">Search</button>-->
+                            </div>
+                            <div class="ss-search-form__results" id="autocomplete-results"></div>
+                        </div>
+                    </form>
+
+                    <!-- END SEARCH -->
+                    
+                </li>
             </ul>
         </div>
     </div>

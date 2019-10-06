@@ -2,6 +2,8 @@ title = "Blog"
 url = "/blog/:page?"
 layout = "default"
 is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
 
 [blogPosts]
 pageNumber = "{{ :page }}"
@@ -34,7 +36,10 @@ postPage = "blog/post"
                             Posted
                             {% if post.categories.count %} in {% endif %}
                             {% for category in post.categories %}
-                                <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                                <a href="{{ category.url }}" style="color: {{ category.awesome_color }};">
+                                    <i class='{{category.awesomeIcon}}'></i> {{ category.name }}
+                                </a>
+                                {% if not loop.last %}, {% endif %}
                             {% endfor %}
                             on {{ post.published_at|date('M d, Y') }}
                         </p>

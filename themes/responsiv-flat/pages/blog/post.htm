@@ -2,6 +2,8 @@ title = "Post"
 url = "/post/:slug"
 layout = "default"
 is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
 
 [blogPost]
 slug = "{{ :slug }}"
@@ -28,7 +30,10 @@ categoryPage = "blog/post"
                         Posted
                         {% if post.categories.count %} in
                             {% for category in post.categories %}
-                                <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+                                <a href="{{ category.url }}" style="color: {{ category.awesome_color }};">
+                                    <i class='{{category.awesomeIcon}}'></i> {{ category.name }}
+                                </a>
+                                {% if not loop.last %}, {% endif %}
                             {% endfor %}
                         {% endif %}
                         on {{ post.published_at|date('M d, Y') }}
@@ -54,23 +59,6 @@ categoryPage = "blog/post"
                     <div class="content">{{ post.content_html|raw }}</div>
                 </div>
             </div>
-
-            <!-- Pagination -->
-            <ul class="pager pull-right">
-                <li class="previous">
-                    <a href="#">
-                        <span class="fui-arrow-left"></span>
-                        Previous
-                    </a>
-                </li>
-                <li class="next">
-                    <a href="#">
-                        Next
-                        <span class="fui-arrow-right"></span>
-                    </a>
-                </li>
-            </ul>
-            <div class="clearfix"></div>
 
         </div>
         <div class="col-sm-3">
