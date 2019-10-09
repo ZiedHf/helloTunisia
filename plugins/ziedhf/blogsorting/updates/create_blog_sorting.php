@@ -15,7 +15,8 @@ use October\Rain\Database\Updates\Migration;
 class CreateBlogSorting extends Migration
 {
 
-    const TABLE = 'rainlab_blog_categories';
+    const TABLE_CATEGORIES = 'rainlab_blog_categories';
+    const TABLE_POSTS = 'rainlab_blog_posts';
 
     /**
      * Execute migrations
@@ -23,7 +24,8 @@ class CreateBlogSorting extends Migration
     public function up()
     {
         if (PluginManager::instance()->hasPlugin('RainLab.Blog')) {
-            $this->createFields();
+            $this->createColumn(self::TABLE_CATEGORIES, Plugin::SORT_COLUMN);
+            $this->createColumn(self::TABLE_POSTS, Plugin::SORT_COLUMN);
         }
     }
 
@@ -33,27 +35,15 @@ class CreateBlogSorting extends Migration
     public function down()
     {
         if (PluginManager::instance()->hasPlugin('RainLab.Blog')) {
-            $this->dropFields();
+            $this->dropColumn(self::TABLE_CATEGORIES, Plugin::SORT_COLUMN);
+            $this->dropColumn(self::TABLE_POSTS, Plugin::SORT_COLUMN);
         }
     }
 
-    /**
-     * Remove new fields
-     */
-    private function dropFields()
-    {
-        $this->dropColumn(Plugin::DB_PREFIX . 'order');
-    }
-
-    /**
-     * Create new fields
-     */
-    private function createFields()
-    {
-
-        if (!Schema::hasColumn(self::TABLE, Plugin::DB_PREFIX . 'order')) {
-            Schema::table(self::TABLE, function ($table) {
-                $table->integer(Plugin::DB_PREFIX . 'order')->nullable();
+    private function createColumn($table, $field) {
+        if (!Schema::hasColumn($table, $field)) {
+            Schema::table($table, function ($table) use ($field) {
+                $table->integer($field)->nullable();
             });
         }
     }
@@ -61,10 +51,10 @@ class CreateBlogSorting extends Migration
     /**
      * @param string $column
      */
-    private function dropColumn(string $column)
+    private function dropColumn(string $table, string $column)
     {
-        if (Schema::hasColumn(self::TABLE, $column)) {
-            Schema::table(self::TABLE, function ($table) use ($column) {
+        if (Schema::hasColumn($table, $column)) {
+            Schema::table($table, function ($table) use ($column) {
                 $table->dropColumn($column);
             });
         }

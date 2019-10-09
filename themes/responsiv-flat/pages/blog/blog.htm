@@ -12,12 +12,22 @@ noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = 404
 postPage = "blog/post"
+
+[Posts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "ziedhf_blogsorting_order desc"
+categoryPage = 404
+postPage = "blog/post"
 ==
 <section id="layout-title">
     <div class="container">
         <h3>Blog</h3>
     </div>
 </section>
+
+{% component 'Posts' %}
 
 <div class="container">
     <div class="row">
