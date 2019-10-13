@@ -1,0 +1,108 @@
+title = "Blog"
+url = "/blog/:page?"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 2
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = 404
+postPage = "blog/post"
+
+[Posts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "ziedhf_blogsorting_order desc"
+categoryPage = 404
+postPage = "blog/post"
+==
+<section id="layout-title">
+    <div class="container">
+        <h3>Blog</h3>
+    </div>
+</section>
+
+{% component 'Posts' %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+            {% set posts = blogPosts.posts %}
+
+            {% for post in posts %}
+                <div class="blog">
+                    <div class="blog-desc">
+                        <h5>
+                            <a href="{{ post.url }}">{{ post.title }}</a>
+                        </h5>
+                        
+                        <hr />
+                        <p class="text-muted">
+                            Posted
+                            {% if post.categories.count %} in {% endif %}
+                            {% for category in post.categories %}
+                                <a href="{{ category.url }}" style="color: {{ category.awesome_color }};">
+                                    <i class='{{category.awesomeIcon}}'></i> {{ category.name }}
+                                </a>
+                                {% if not loop.last %}, {% endif %}
+                            {% endfor %}
+                            on {{ post.published_at|date('M d, Y') }}
+                        </p>
+                        
+                        <!--Thunbnail-->
+                        {% if post.featured_images.count %}
+                            <div class="featured-images text-center">
+                                {% set image = post.featured_images[0] %}
+                                <a href="{{ post.url }}">
+                                    <img
+                                        data-src="{{ image.filename }}"
+                                        src="{{ image.path }}"
+                                        alt="{{ image.description }}"
+                                        class="img-responsive" 
+                                    />
+                                </a>
+                            </div>
+                            <hr />
+                        {% endif %}
+                        <!--END Thunbnail-->
+                        
+                        <p>{{ post.summary|raw }}</p>
+                        <a class="btn btn-lg btn-default" href="{{ post.url }}">Read More...</a>
+                    </div>
+                </div>
+                        {% else %}
+                    <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
+            {% endfor %}
+
+{% if posts.lastPage > 1 %}
+    <ul class="pagination">
+        {% if posts.currentPage > 1 %}
+            <li><a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
+        {% endif %}
+
+        {% for page in 1..posts.lastPage %}
+            <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                <a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): page }) }}">{{ page }}</a>
+            </li>
+        {% endfor %}
+
+        {% if posts.lastPage > posts.currentPage %}
+            <li><a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}
+
+            <div class="clearfix"></div>
+        </div>
+        <div class="col-sm-3">
+
+            {% partial 'blog/sidebar' %}
+
+        </div>
+    </div>
+</div>
