@@ -358,4 +358,7 @@
   'Raviraj\\Rjgallery\\Components\\Gallery' => 'plugins/raviraj/rjgallery/components/Gallery.php',
   'Raviraj\\Rjgallery\\Components\\GallerySlug' => 'plugins/raviraj/rjgallery/components/GallerySlug.php',
   'Raviraj\\Rjgallery\\Components\\GalleriesList' => 'plugins/raviraj/rjgallery/components/GalleriesList.php',
+  'excodus\\translateextended\\Plugin' => 'plugins/excodus/translateextended/Plugin.php',
+  'Excodus\\TranslateExtended\\Components\\ExtendedLocalePicker' => 'plugins/excodus/translateextended/components/ExtendedLocalePicker.php',
+  'Excodus\\TranslateExtended\\Models\\Settings' => 'plugins/excodus/translateextended/models/Settings.php',
 );
