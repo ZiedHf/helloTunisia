@@ -2,6 +2,9 @@
 useAutoComplete = 1
 autoCompleteResultCount = 5
 showProviderBadge = 1
+
+[localePicker]
+forceUrl = 0
 ==
 {# Note: Only one levels of sublinks are supported by Bootstrap 3 #}
 {% set
@@ -126,9 +129,10 @@ showProviderBadge = 1
                             <div class="ss-search-form__results" id="autocomplete-results"></div>
                         </div>
                     </form>
-
                     <!-- END SEARCH -->
-                    
+                    <!-- Language Picker -->
+                    {% component 'localePicker' %}
+                    <!-- END Language Picker -->
                 </li>
             </ul>
         </div>

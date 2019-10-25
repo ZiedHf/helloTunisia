@@ -1,8 +1,10 @@
-
 .home-title {
     background: #f1f1f1;
     color: @text-color;
     position: relative;
+    .section.section.hero-area div.hero-slider.owl-carousel div.owl-nav button {
+        border: none;
+    }
     #carousel-home {
         .carousel-inner {
             div img.img-car {
@@ -45,6 +47,36 @@
         padding-bottom:70px;
         h3 {
             font-size: 26px;
+        }
+    }
+}
+
+.latestNews {
+    .article {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .article-thumbnail {
+            @media (max-width: 768px) {
+                flex: 1 1 100%;    
+            }
+            @media (min-width: 768px) {
+                flex: 1;
+            }
+            align-self: center;
+            img {
+                width: max-content;
+            }
+        }
+        .article-info {
+            @media (min-width: 768px) {
+                padding-left: 15px;
+            }
+            flex: 2;
+            align-self: center;
+            h3 {
+                margin: 0;
+            }
         }
     }
 }
