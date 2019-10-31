@@ -5,6 +5,8 @@ showProviderBadge = 1
 
 [localePicker]
 forceUrl = 0
+
+[LocalePickerPics]
 ==
 {# Note: Only one levels of sublinks are supported by Bootstrap 3 #}
 {% set
@@ -131,7 +133,7 @@ forceUrl = 0
                     </form>
                     <!-- END SEARCH -->
                     <!-- Language Picker -->
-                    {% component 'localePicker' %}
+                    <div style="height:28px;">{% component 'LocalePickerPics' %}</div>
                     <!-- END Language Picker -->
                 </li>
             </ul>

@@ -1,6 +1,5 @@
 <?php
 namespace ZiedHf\BlogSorting\Models;
-use Log;
 use Cms\Classes\ComponentBase;
 use Cms\Classes\Page;
 use RainLab\Blog\Models\Post as PostModel;
@@ -41,21 +40,13 @@ class Post extends PostModel
       * Sorting
       */
     if (in_array($sort, array_keys(static::$additionalSortingOptions))) {
-      Log::info('YES');
-      Log::info($sort);
       @list($sortField, $sortDirection) = explode(' ', $sort);
       if (is_null($sortDirection)) {
         $sortDirection = "desc";
       }
-      Log::info($sortField);
-      Log::info($sortDirection);
 
       // Sort the NULLs values in the last order
       $query->orderByRaw('ISNULL('. $sortField .'), ' . $sortField . ' ' . $sortDirection);
-    } else {
-      Log::info('NO');
-      Log::info($sort);
-      Log::info(static::$additionalSortingOptions);
     }
 
     $query = parent::scopeListFrontEnd($query, $options);

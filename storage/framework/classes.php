@@ -361,4 +361,9 @@
   'excodus\\translateextended\\Plugin' => 'plugins/excodus/translateextended/Plugin.php',
   'Excodus\\TranslateExtended\\Components\\ExtendedLocalePicker' => 'plugins/excodus/translateextended/components/ExtendedLocalePicker.php',
   'Excodus\\TranslateExtended\\Models\\Settings' => 'plugins/excodus/translateextended/models/Settings.php',
+  'ziedhf\\translatepics\\Plugin' => 'plugins/ziedhf/translatepics/Plugin.php',
+  'RainLab\\Translate\\Controllers\\Locales' => 'plugins/rainlab/translate/controllers/Locales.php',
+  'Backend\\FormWidgets\\MediaFinder' => 'modules/backend/formwidgets/MediaFinder.php',
+  'ZiedHf\\TranslatePics\\Components\\LocalePickerPics' => 'plugins/ziedhf/translatepics/components/LocalePickerPics.php',
+  'ZiedHf\\TranslatePics\\Models\\Locale' => 'plugins/ziedhf/translatepics/models/Locale.php',
 );
